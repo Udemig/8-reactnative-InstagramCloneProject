@@ -139,6 +139,24 @@ const Share = () => {
   );
 };
 
+const Dropdown = () => {
+  return (
+    <Image
+      style={{width: 24, height: 24}}
+      source={require('../assets/dropdown.png')}
+    />
+  );
+};
+
+const BurgerMenu = () => {
+  return (
+    <Image
+      style={{width: 24, height: 24}}
+      source={require('../assets/burger.png')}
+    />
+  );
+};
+
 export {
   Logo,
   Home,
@@ -156,4 +174,6 @@ export {
   Bookmark,
   Commet,
   Share,
+  Dropdown,
+  BurgerMenu,
 };

@@ -36,33 +36,32 @@ const Post = ({post}) => {
             </TouchableOpacity>
           </View>
         </View>
-      </View>
 
-      <View>
-        <Text style={styles.likes}> {post.likes} likes </Text>
-      </View>
+        <View>
+          <Text style={styles.likes}> {post.likes} likes </Text>
+        </View>
 
-      <View style={{flex: 1, marginHorizontal: 5}}>
-        <Text style={styles.user}> {post?.user.name}</Text>
         <ReadMore
-          numberOfLines={2}
           seeLessStyle={{color: '#999'}}
           seeLessText="Daha az"
-          seeMoreText="Daha Fazla"
-          seeMoreStyle={{color: '#999'}}>
-          <Text> {post.description} </Text>
+          seeMoreText="Daha fazla"
+          seeMoreStyle={{color: '#999'}}
+          numberOfLines={2}>
+          <Text style={styles.user}>{post?.user.name}</Text>
+          {` `}
+          {post?.description}
         </ReadMore>
-      </View>
 
-      {post.comments > 0 && (
-        <TouchableOpacity style={{paddingBottom: 7}} activeOpacity={0.7}>
-          <Text style={styles.comments}> {post.comments} comments </Text>
-        </TouchableOpacity>
-      )}
+        {post.comments > 0 && (
+          <TouchableOpacity style={{paddingBottom: 7}} activeOpacity={0.7}>
+            <Text style={styles.comments}> {post.comments} comments </Text>
+          </TouchableOpacity>
+        )}
 
-      <View>
-        <Text style={styles.date}>{post.date} </Text>
-        <Text style={styles.translation}> See Translation </Text>
+        <View>
+          <Text style={styles.date}>{post.date} </Text>
+          <Text style={styles.translation}> See Translation </Text>
+        </View>
       </View>
     </View>
   );

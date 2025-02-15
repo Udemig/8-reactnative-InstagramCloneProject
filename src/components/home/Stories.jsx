@@ -7,7 +7,7 @@ const Stories = () => {
     <View style={styles.stories}>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {stories.map(story => (
-          <Story story={story} />
+          <Story story={story} key={story.id} />
         ))}
       </ScrollView>
     </View>
